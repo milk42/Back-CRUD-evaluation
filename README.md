@@ -99,7 +99,7 @@ Pour exemple, voici la réalistaion du model Temoin sans Hibernate donc avec la 
         - [TemoinControllerJdbc](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Controller/TemoinControllerJdbc.java)
 
 ## INSTALLATION
-### Création d'une base de donnée vide
+### Création d'une base de données vide
 Via les lignes de commande SQL:
 ```
 CREATE DATABASE gedesaft_jpa_jdbc;
@@ -113,6 +113,10 @@ CREATE DATABASE gedesaft_v2;
 Le script de la base de données se trouve dans les fichiers :
 [data.sql](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/resources/Script/database.sql)
 [script.sql](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/resources/Script/script.sql)
+
+### SCHEMA SQL
+
+![](documents/Schéma.PNG)
 
 ### Récupération du projet
 Le projet se trouve dans mon GITHUB à l'adresse suivante:
@@ -128,73 +132,23 @@ En lançant l'application (run as Application java), la connexion au port:8080 s
 il vous est donc possible de tester ce programme en créant (test du CRUD) des suspects par exemple, directement
 depuis les lignes de commande SQL ou via POSTMAN.
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////:
+### TO BE CONTINUED
 
+## Voici la partie FRONT
 
-### SCHEMA SQL
+Pour utiliser ce programme vous avez le choix entre deux interfaces mettant en avant le CRUD sur le modele SUSPECT:
 
-![](documents/Schema_BdD.PNG)
-![](documents/schema.txt)
-
-### SCRIPTS SQL
-
-#### /!\ LES SCRIPTS SQL SONT CONSULTABLES DANS LE DOSSIER DOCUMENTS /!\
-
-- documents/Schema.mwb
-- documents/filrouge_shema.sql
-- Rappel : Pour l’obtention des données, le fichier “data.sql” est nécessaire et bien présent dans le projet (/Fil_Rouge/src/main/resources/data.sql)
-
-## REQUÊTES SQL
-
-- Le framework (Java) utilisé est Hibernate.  
-Les requêtes SQL sont alors automatiquement traitées.  
-C’est pourquoi, des commentaires ont été intégrés dans les Controllers (/Fil_Rouge/src/main/java/co/simplon/filrouge/controller) afin de visualiser les requêtes SQL correspondantes.
-
-
-
-
-
-
-
-
-
-
-
-
-# @Author Davy
-
-## BACK
-
-- DataBase / Requêtes (MySQL Workbench - Travail groupé)
-- CRUD Véhicule
-- Gestion (création/suppression) liens vehicule/affaire
-- Requête affichage des affaires liées à un véhicule
-- Gestion de la recherche de la page véhicule
-- Tests unitaires
-
-### Fichiers JAVA gérés :
-- AffaireController
-- Vehicule (model) 
-- VehiculeController
-- VehiculeDAO
-- VehiculeService
-- VehiculeRepository
-- VehiculeControllerTest
-
-
-## FRONT
-
-- Page véhicule
-
-### Fichiers ANGULAR gérés :
-- vehicule.component (.css/.html/.ts) 
-- affaires-liées_au_vehicule.component(.css/.html/.ts)
-- ivehicule.ts
-- vehicule.service.ts
-- api.service.ts
-- app.module.ts
-
-
-## SAUVEGARDE
-
-- GITHUB (sauvegarde/récupération de version de projet et gestion des conflits)
+        - FRONT SIMPLE [ICI](https://github.com/milk42/Front-CRUD-evaluation)
+        - FRONT EQUIPE plus ergonomique avec une expérience utilisateur pensée et plus RESPONSIVE [ICI](https://github.com/milk42/Front-Equipe-CRUD) => adaptée avec le programme d'équipe [ICI](https://github.com/milk42/Back-Equipe-CRUD)
+ 
+ ##MOCKUP
+ 
+        Cette application à été basée sur ce Mockup :
+        
+        ![](documents/Login.PNG)
+        ![](documents/Accueil.PNG)
+        ![](documents/Mockup.PNG)
+        
+        
+        
+        
