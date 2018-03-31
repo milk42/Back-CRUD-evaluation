@@ -68,10 +68,6 @@ Démontrer l'utilisation du CRUD.
 ![](documents/DArechercheArme.PNG)
 
 
-### DIAGRAMME DE CLASSES
-
-![](documents/Diagramme_classe.png)
-
 
 ## Technologies Back
 Sous éclipse: 
