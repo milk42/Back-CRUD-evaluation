@@ -40,7 +40,7 @@ Démontrer l'utilisation du CRUD.
 
 ![](documents/UseCase.PNG)
 
-### Diagramme de classe
+### DIAGRAMME DE CLASSE
 
 ![](documents/DiagrammeClasses.PNG)
 
@@ -49,88 +49,75 @@ Démontrer l'utilisation du CRUD.
 
 - CONNEXION
 
-![](documents/Diagramme_activite_connexion.png)
+![](documents/DAauthentification.PNG)
 
-- GESTION DES UTILISATEURS
+- GESTION DES ACCES
 
-![](documents/Diagramme_activite_utilisateur.png)
+![](documents/DAgestionAcces.PNG)
 
-- GESTION DES AFFAIRES
+- CREATION ARMES
 
-![](documents/Diagramme_activite_affaire.png)
+![](documents/DAcretionArme.PNG)
 
-- GESTION DES ARMES
+- CREATION ARMES
 
-![](documents/Diagramme_activite_armes.png)
+![](documents/DAcretionArme.PNG)
 
-- GESTION DES VEHICULES
+- RECHERCHE ARME
 
-![](documents/Diagramme_activite_vehicules.png)
+![](documents/DArechercheArme.PNG)
 
 
 ### DIAGRAMME DE CLASSES
 
 ![](documents/Diagramme_classe.png)
 
-### MOCKUPS
 
-- PAGE D’ACCUEIL
-
-![](documents/Mockup_Accueil.png)
-
-- PAGE DE L’ADMINISTRATEUR
-
-![](documents/Mockup_Admin.png)
-
-- PAGES DES AFFAIRES
-
-![](documents/Mockup_Affaires.png)
-
-- PAGES DES ARMES
-
-![](documents/Mockup_Armes.png)
-
-- PAGES DES SUSPECTS
-
-![](documents/Mockup_Suspects.png)
-
-- PAGES DES VEHICULES
-
-![](documents/Mockup_Vehicules.png)
-
-
-
-
-
-
-## Technologies
+## Technologies Back
 Sous éclipse: 
-  -programme en JAVA Spring Boot et ustilisation de l'ORM Hibernate pour créer la base de données en programmant.
+  -programme en JAVA Spring Boot et ustilisation de l'ORM Hibernate pour créer les tables et ses relations 
+   dans la base de données.
+  
 ## Evaluation des compétences
+### Structure du projet
+
 Réalisation du programme: 
   - Toutes les classes (model) de A à Z  ainsi que leur controller en passant par l'interface JPArepository
     organisé par [packages](https://github.com/milk42/Back-CRUD-evaluation/tree/master/src/main/java/co/simplon).
+    
   - Vous trouverez des commentaires sur le suivi de la classe Suspect avec l'utilisation de JPA Hibernate.
-      . [SuspectModel]() 
-      . [iRepositorySuspect]()
-      . [SuspectController]()
-## Structure du projet
-Programme réalialisé avec le pattern MVC
-SuspectModèle : Classe @Entity décrivant l'objet suspect avec les décorations d'Hibernate
-                pour donner un comportement aux attributs afin de structurer la base de données.
-IRepositorySuspect : Interface implémentée de JPArepository contenant les méthodes pour les requêtes sql de base.
-SuspectController : Classe s'occupant de l'Api, les requêtes SQL étant cachées derrière les méthodes de JPArepository :
-                   celles-ci seront inscritent en commentaires.
+      . [SuspectModel](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/ModelEntity/SuspectModel.java) 
+      . [iRepositorySuspect](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Repository/IRepositorySuspect.java)
+      . [SuspectController](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Controller/SuspectController.java)
+      
+Pour exemple, voici la réalistaion du model Temoin sans Hibernate donc avec la DAO:
+        .Le CRUD n'y est pas totalement présent (manque de temps)
+        - [TemoinJDBC](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/ModelEntity/TemoinJdbc.java)
+        - [TemoinDAO](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Repository/TemoinDAO.java)
+        - [JdbcTemoinDAO](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Repository/jdbcTemoinDAO.java)
+        - [TemoinService](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Service/TemoinService.java)
+        - [TemoinControllerJdbc](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Controller/TemoinControllerJdbc.java)
 
 ## INSTALLATION
 ### Création d'une base de donnée vide
 Via les lignes de commande SQL:
 ```
-CREATE DATABASE gedesaft_v2
+CREATE DATABASE gedesaft_jpa_jdbc;
 ```
+Pour tester la JDBC depuis la classe Temoin avec Postman
+OU
+Via les lignes de commande SQL toujours en changeant le fichier properties:
+```
+CREATE DATABASE gedesaft_v2;
+```
+Le script de la base de données se trouve dans les fichiers :
+[data.sql](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/resources/Script/database.sql)
+[script.sql](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/resources/Script/script.sql)
+
 ### Récupération du projet
 Le projet se trouve dans mon GITHUB à l'adresse suivante:
 [Lien GITHUB milk42](https://github.com/milk42/Back-CRUD-evaluation)
+
 ### Ouvrir le projet dans éclipse
 Changer le mot de passe existant avec le votre dans l'application properties
 sur la ligne suivante: 
@@ -141,8 +128,7 @@ En lançant l'application (run as Application java), la connexion au port:8080 s
 il vous est donc possible de tester ce programme en créant (test du CRUD) des suspects par exemple, directement
 depuis les lignes de commande SQL ou via POSTMAN.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////:
 
 
 ### SCHEMA SQL
