@@ -134,16 +134,16 @@ depuis les lignes de commande SQL ou via POSTMAN.
 
 Pour utiliser ce programme vous avez le choix entre deux interfaces mettant en avant le CRUD sur le modele SUSPECT:
 
-        - FRONT SIMPLE [ICI](https://github.com/milk42/Front-CRUD-evaluation)
-        - FRONT EQUIPE plus ergonomique avec une expérience utilisateur pensée et plus RESPONSIVE [ICI](https://github.com/milk42/Front-Equipe-CRUD) => adaptée avec le programme d'équipe [ICI](https://github.com/milk42/Back-Equipe-CRUD)
+   - FRONT SIMPLE [ICI](https://github.com/milk42/Front-CRUD-evaluation)
+   - FRONT EQUIPE plus ergonomique avec une expérience utilisateur pensée et plus RESPONSIVE [ICI](https://github.com/milk42/Front-Equipe-CRUD) => adaptée avec le programme d'équipe [ICI](https://github.com/milk42/Back-Equipe-CRUD)
  
  ##MOCKUP
  
-        Cette application à été basée sur ce Mockup :
+Cette application à été basée sur ce Mockup :
         
-        ![](documents/Login.PNG)
-        ![](documents/Accueil.PNG)
-        ![](documents/Mockup.PNG)
+  ![](documents/Login.PNG)
+  ![](documents/Accueil.PNG)
+  ![](documents/Mockup.PNG)
         
         
         
